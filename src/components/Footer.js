@@ -8,7 +8,7 @@ export default function Footer({movieInfo, date, time}) {
                 <>
                     <Container>
                         <img src={movieInfo.posterURL} alt="Poster do filme" />
-                        <div>
+                        <div data-test="footer">
                             <p>{movieInfo.title}</p>
                         </div>
                     </Container>

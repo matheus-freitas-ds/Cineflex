@@ -4,9 +4,9 @@ import Hour from "./Hour";
 export default function Session({info, showTimes}){
     
     return(
-        <Container>
+        <Container data-test="movie-day">
             <Date>
-                <p data-test="movie-day">{info.weekday} - {info.date}</p>
+                <p>{info.weekday} - {info.date}</p>
             </Date>
             <Time>
                 {showTimes.map((h) => <Hour hour={h.name} index={h} key={h.id}/>)}
