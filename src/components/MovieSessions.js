@@ -27,7 +27,7 @@ export default function MovieSessions() {
             <Title>
                 <p>Selecione o horário</p>
             </Title>
-            <Container>
+            <Container data-test="showtime">
                 {date.map((info) => <Session key={info.id} info={info} showTimes={info.showtimes}/>)} 
             </Container>
             <Footer  movieInfo={movieInfo} />

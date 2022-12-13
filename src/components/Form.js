@@ -39,10 +39,10 @@ export default function Form({id, name, setName, cpf, setCpf, infos, setInfos, a
         <Container>
             <form onSubmit={sendForm}>
                 <label htmlFor="nome">Nome do comprador</label>
-                <input type="text" placeholder="Digite seu nome..." id="nome" value={name} onChange={(e) => setName(e.target.value)} required/>
+                <input type="text" placeholder="Digite seu nome..." id="nome" value={name} onChange={(e) => setName(e.target.value)} required data-test="client-name"/>
                 <label htmlFor="cpf">CPF do comprador</label>
-                <input type="text" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="Digite seu CPF.." id="cpf" value={cpf} onChange={(e) => setCpf(e.target.value)} required/>
-                <button type="submit">Reservar assento(s)</button>
+                <input type="text" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="Digite seu CPF.." id="cpf" value={cpf} onChange={(e) => setCpf(e.target.value)} required data-test="client-cpf"/>
+                <button type="submit" data-test="book-seat-btn">Reservar assento(s)</button>
             </form>
         </Container>
     )

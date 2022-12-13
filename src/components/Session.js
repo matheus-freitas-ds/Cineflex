@@ -6,7 +6,7 @@ export default function Session({info, showTimes}){
     return(
         <Container>
             <Date>
-                <p>{info.weekday} - {info.date}</p>
+                <p data-test="movie-day">{info.weekday} - {info.date}</p>
             </Date>
             <Time>
                 {showTimes.map((h) => <Hour hour={h.name} index={h} key={h.id}/>)}

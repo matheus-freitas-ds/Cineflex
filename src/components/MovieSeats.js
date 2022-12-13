@@ -49,15 +49,15 @@ export default function MovieSeats({infos, setInfos}) {
                 {seats.map((s) => (<Seat seats={s} id={id} setId={setId} key={s.id} selectedSeats={selectedSeats} setSelectedSeats={setSelectedSeats} />))}
             </Seats>
             <Label>
-                <div>
+                <div data-test="seat">
                     <Selected/>
                     <p>Selecionado</p>
                 </div>
-                <div>
+                <div data-test="seat">
                     <Available/>
                     <p>Disponível</p>
                 </div>
-                <div>
+                <div data-test="seat">
                     <Unavailable/>
                     <p>Indisponível</p>
                 </div>
