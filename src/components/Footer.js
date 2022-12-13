@@ -6,8 +6,8 @@ export default function Footer({movieInfo, date, time}) {
         (date === undefined || time === undefined ? 
             (
                 <>
-                    <Container>
-                        <img src={movieInfo.posterURL} alt="Poster do filme" data-test="footer" />
+                    <Container data-test="footer">
+                        <img src={movieInfo.posterURL} alt="Poster do filme" />
                         <div>
                             <p>{movieInfo.title}</p>
                         </div>
@@ -15,7 +15,7 @@ export default function Footer({movieInfo, date, time}) {
                 </>
             ) : (
                 <>
-                    <Container>
+                    <Container data-test="footer">
                         <img src={movieInfo.posterURL} alt="Poster do filme"/>
                         <div>
                             <p>{movieInfo.title}</p>
