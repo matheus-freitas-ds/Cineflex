@@ -7,7 +7,7 @@ export default function Hour({hour, index}){
         <>
             <Link to={`/seats/${index.id}`}>
                 <Container>
-                    <p>{hour}</p>
+                    <p data-test="showtime">{hour}</p>
                 </Container>
             </Link>
         </>)

@@ -13,22 +13,22 @@ export default function Success({infos}) {
                 <p>Pedido feito com sucesso!</p>
             </Title>
             <Container>
-                <div>
+                <div data-test="movie-info">
                     <h1>Filme e sessão</h1>
                     <p>{infos[0].movieTitle}</p>
                     <p>{infos[0].date} - {infos[0].hour}</p>
                 </div>
-                <div>
+                <div data-test="seats-info">
                     <h1>Ingressos</h1>
                     {infos[0].numberSeats.map((seat, index) => <p key={index}> Assento {seat} </p>)}
                 </div>
-                <div>
+                <div data-test="client-info">
                     <h1>Comprador</h1>
                     <p>Nome: {infos[0].name}</p>
                     <p>CPF: {infos[0].cpf}</p>
                 </div>
             </Container>
-            <Button onClick={() => navigate("/")}>
+            <Button onClick={() => navigate("/")} data-test="go-home-btn">
                 <p>Voltar pra Home</p>
             </Button>
         </>
